@@ -1,0 +1,41 @@
+<div class="">
+    <div class="d-flex justify-content-around">
+        <h5>Crear Nuevo Artículo</h5>
+        <div>
+            <button (click)="createArticulo()"  class="btn btn-primary">Crear</button>
+        </div>
+    </div>
+        <form class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="codigo">Código</label>
+                    <input [(ngModel)]="codigo_articulo" name="codigo" type="text" class="form-control" id="codigo_articulo" placeholder="Ingrese codigo">
+                </div>
+                <div class="form-group">
+                    <label for="marca">Marca</label>
+                    <input  [(ngModel)]="marca_articulo"  name="marca" type="text" class="form-control" id="nombre" placeholder="Ingrese marca">
+                </div>
+                <div class="form-group">
+                    <label for="modelo">Modelo</label>
+                    <input [(ngModel)]="modelo_articulo" name="modelo" type="text" class="form-control" id="nombre" placeholder="Ingrese modelo">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <input [(ngModel)]="descripcion_articulo" name="descripcion" type="text" class="form-control" id="nombre" placeholder="Ingrese descripcion">
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo</label>
+                    <input  [(ngModel)]="id_tipo_insumo" name="id_tipo" type="number" class="form-control" id="nombre" placeholder="Ingrese tipo">
+                </div>
+                <div class="form-group d-flex flex-column">
+                    <label for="nombre">Categoria</label>
+                    <select (change)="selectCategoria($event)" class="form-select" aria-label="Default select example">
+                        <option selected disabled> Selecciona categoria</option>
+                        <option *ngFor="let categoria of categorias"  value="{{ categoria.id_categoria_articulo }}">{{ categoria.glosa_categoria_articulo }}</option>
+                    </select>
+                </div>  
+            </div>
+        </form>      
+    </div>  

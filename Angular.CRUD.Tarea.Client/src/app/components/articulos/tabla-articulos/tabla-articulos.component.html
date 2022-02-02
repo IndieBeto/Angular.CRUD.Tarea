@@ -1,0 +1,28 @@
+
+<a  class="p-1 btn btn-primary" routerLink="/create">Crear Nuevo</a> 
+<div class="d-flex  justif-content-end">
+  <table class="table" >
+      <thead>
+        <tr>
+          <th scope="col">Código Categoría</th>
+          <th scope="col">Descripción Categoría</th>
+          <th scope="col">Estado Categoría</th>
+          <th scope="col">Descripción Artículo</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let articulo of articulos">
+          <th scope="row">{{ articulo.codigo_articulo }}</th>
+          <td>{{ articulo.glosa_categoria_articulo }}<input *ngIf="editArticuloModel"></td >
+
+          <td>{{ articulo.vigente_categoria_articulo}}</td>
+          <td>{{ articulo.descripcion_articulo }}</td>
+          <td><a routerLink="/edit/{{ articulo.id_articulo}}" class="btn btn-sm btn-warning">Editar</a></td>
+          <td><span (click)="deleteArticulo(articulo.id_articulo)" class="btn btn-sm btn-danger">Borrar</span></td>
+        </tr>
+    </table>
+</div>
+         
+
