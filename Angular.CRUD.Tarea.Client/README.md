@@ -7,9 +7,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Instrucciones de Ambiente
-1- Crear base de datos local en MSSQL Server, de nombre => "AngularCRUD"
-2.- Ejecutar procedimientos almacenados
-3.- Descargar dependencias de angular y ejecutar el siguiente comando en ./Angular.CRUD.Tarea.Client/
+1- Crear base de datos local en MSSQL Server, de nombre => "AngularCRUD" \n
+2.- Ejecutar procedimientos almacenados\n
+3.- Descargar dependencias de angular y ejecutar el siguiente comando en ./Angular.CRUD.Tarea.Client/\n
 
 ```
 npm install
