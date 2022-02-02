@@ -133,14 +133,11 @@ BEGIN
 
 ```
 CREATE PROCEDURE [DBO].[SP_CONSULTAR_CATEGORIA]
+	@id_categoria_articulo int
 AS
-SELECT * FROM Categoria
-GO;
-
-@id_categoria_articulo int
-AS
+BEGIN
 SELECT * FROM Categoria WHERE id_categoria_articulo = @id_categoria_articulo
-GO
+END
 ```
 
 ## Crear procedimiento DELETE Categoria
